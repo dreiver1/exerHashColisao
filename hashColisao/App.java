@@ -10,12 +10,7 @@ public class App {
     ha.insert(10);
     ha.insert(1010);
     ha.insert(2010);
-
-    System.out.println(ha.search(2010));
-    System.out.println(ha.delete(10));
-    System.out.println(ha.delete(2010));
-    System.out.println(ha.delete(3010));
-
-
+    
+    System.out.println(ha.toString());
   }
 }

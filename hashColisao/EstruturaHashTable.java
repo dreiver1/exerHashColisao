@@ -1,6 +1,13 @@
 package hashColisao;
 
+import java.util.Arrays;
+
 public class EstruturaHashTable implements EstruturaDeDados{
+    @Override
+    public String toString() {
+        return "EstruturaHashTable [tabela=" + Arrays.toString(tabela) + "]";
+    }
+
     private Integer tabela[][];
     //TODO adicionar elementos necessários para implementar o porão
 
@@ -37,7 +44,7 @@ public class EstruturaHashTable implements EstruturaDeDados{
             tabela[index][0] = -1;
             return true;
         }
-        if(tabela[index][0] != chave){
+        if(tabela[index][0] != null && tabela[index][0] != chave){
             for (int i = 1; i < tabela[index].length; i++) {
                 if(tabela[index][i] != null && tabela[index][i] == chave){
                     tabela[index][i] = -1;
